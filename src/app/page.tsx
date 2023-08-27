@@ -1,5 +1,6 @@
 "use client";
 import Tables from "@/components/Tables";
+import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -25,9 +26,9 @@ export default function Home() {
     const cityUrl = `${process.env.NEXT_PUBLIC_ANALYTICS_URL}?format=json-cors&key=${process.env.NEXT_PUBLIC_ANALYTICS_ID}&city_name=${name}`;
 
     try {
-      const response = await fetch(cityUrl);
-      setData(await response.json());
-
+      const response = await axios.get(cityUrl);
+      setData(response.data);
+      console.log(response);
       setCityName("");
     } catch (error) {
       alert(error);
