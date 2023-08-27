@@ -28,10 +28,11 @@ export default function Home() {
     try {
       const response = await axios.get(cityUrl);
       setData(response.data);
-      console.log(response);
+
       setCityName("");
     } catch (error) {
-      alert(error);
+      alert("some problem in the request happened");
+      console.log(error);
     }
   }
 
