@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Weather Today</h1>
 
-## Getting Started
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&labelColor=000000">
+</p>
 
-First, run the development server:
+<p align="center">
+  <img alt="Preview" src="./print/weather-today.png">
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## ✨ Tecnologias
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Typescript](https://www.typescriptlang.org/)
+- [Nextjs](https://nextjs.org/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Consumindo os dados informativos do tempo na api da HG Brasil
 
-## Learn More
+- [API](https://hgbrasil.com/)
 
-To learn more about Next.js, take a look at the following resources:
+## 💻 Projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Weather Today é um app que informa como esta o tempo em sua cidade..
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🚀 Como executar
 
-## Deploy on Vercel
+- Clone o repositório
+- 1. `git clone https://github.com/wellpinho/weather-today.git`
+- 2. `cd weather-today`
+- 3. `npm i` para instalar as dependências
+- 4. o `npm run dev` para iniciar a aplicação.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Acesse as rotas pelo Postman ou Insomnia: `http://localhost:3000`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📄 Licença
+
+- Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+- Este app nasceu a partiri da aula do curso CJRM do professor Roger Melo: [Link do curso](https://app.nutror.com/curso/977a43d31cedcb6e7d064649ddd6c5436155aaf)
+
+Feito com dedicação e paixão pela programação em geral &nbsp;by Wellington Pinho 👋🏻 &nbsp;
+[Meu Linkedin](https://www.linkedin.com/in/wellpinho/)
+[Meu Portfólio](https://wellpinho.com)
