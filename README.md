@@ -36,7 +36,7 @@ Acesse as rotas pelo Postman ou Insomnia: `http://localhost:3000`
 ## 📄 Licença
 
 - Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-- Este app nasceu a partiri da aula do curso CJRM do professor Roger Melo: [Link do curso](https://app.nutror.com/curso/977a43d31cedcb6e7d064649ddd6c5436155aaf)
+- Este app nasceu a partir da aula do curso CJRM do professor Roger Melo: [Link do curso](https://app.nutror.com/curso/977a43d31cedcb6e7d064649ddd6c5436155aaf)
 
 Feito com dedicação e paixão pela programação em geral &nbsp;by Wellington Pinho 👋🏻 &nbsp;
 [Meu Linkedin](https://www.linkedin.com/in/wellpinho/)
