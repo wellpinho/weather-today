@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-7xl pb-24 pt-4 sm:px-6 sm:py-32 lg:px-8">
       <h2 className="text-center mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-        Wellingotn Pinho
+        Wellington Pinho
         <div className="text-gray-400 font-thin btn btn-tremura">
           <a href="https://wellpinho.com">
             wellpinho.com <span aria-hidden="true">→</span>
