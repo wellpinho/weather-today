@@ -1,7 +1,7 @@
 const Login = () => {
     return (
         <div>
-            <h1>Login Pagina</h1>
+            <h1>Entar Pagina</h1>
             {/* Adicione o formulário de login aqui */}
         </div>
     );
