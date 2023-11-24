@@ -56,29 +56,32 @@ export default function Home() {
    - Adicionada lógica para exibir ou ocultar o menu responsivo com base no estado (isMenuOpen).
   */
 
+  // Adicionada página de equipe em pages/equipe.tsx
+  // A página inclui informações sobre a equipe (nomes, GitHub, LinkedIn)
+
   return (
     <div>
       {/* Inicio Nav */}
-      <nav className="bg-black">
+      <nav className="bg-nav">
         <div className=" w-[92%] mx-auto sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               {/* Logo e outros elementos do Navbar */}
               <div className="flex-shrink-0">
-                <a href="/" className="text-white">
-                  Logo
+                <a href="/" className="text-white text-3xl font-signature">
+                  weather today
                 </a>
               </div>
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               {/* Itens de menu para dispositivos maiores */}
               <div className="ml-4 flex items-center space-x-4">
                 <a href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
                   Home
                 </a>
-                <a href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
-                  Teams
+                <a href="/equipe" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
+                  Desenvolvedores
                 </a>
                 <a href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
                   Contact
@@ -86,15 +89,23 @@ export default function Home() {
               </div>
             </div>
 
-            <div>
+            <div className="hidden lg:flex items-center space-x-2">
               <Link href="/login">
-                <button
-                  className="hidden md:block text-white border-solid border-white border-2 px-5 py-2 text-1 uppercase tracking-widest hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-full text-sm font-bold">
-                  Login</button>
+                <button className="text-white border-solid border-white border-2 px-5 py-2 text-1 hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-md text-sm font-bold">
+                  Entrar
+                </button>
+              </Link>
+              <Link href="/cadastro">
+                <button className="text-white border-solid border-white border-2 px-5 py-2 text-1 hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-md text-sm font-bold">
+                  Criar Conta
+                </button>
               </Link>
             </div>
 
-            <div className="md:hidden flex items-center">
+
+
+
+            <div className="lg:hidden flex items-center">
               {/* Botão de toggle para o menu responsivo */}
               <button
                 onClick={toggleMenu}
@@ -138,24 +149,28 @@ export default function Home() {
           </div>
         </div>
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             {/* Conteúdo do menu responsivo quando está aberto */}
             <div className="px-2 pt-2 pb-3 space-x-1 sm:px-3 flex flex-col items-center">
               <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
                 Home
               </a>
-              <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
-                Teams
+              <a href="/equipe" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
+                Desenvolvedores
               </a>
               <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
                 Contact
               </a>
               <Link href="/login">
-                <button
-                  className=" text-white border-solid border-white border-2 px-5 py-2 text-1 uppercase tracking-widest hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-full text-sm font-bold">
-                  Login</button>
+                <button className="text-white border-solid border-white border-2 px-9 py-2 mb-3 text-1 hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-md text-sm font-bold">
+                  Entrar
+                </button>
               </Link>
-
+              <Link href="/cadastro">
+                <button className="text-white border-solid border-white border-2 px-5 py-2 mb-3 text-1 hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-md text-sm font-bold">
+                  Criar Conta
+                </button>
+              </Link>
             </div>
           </div>
         )}

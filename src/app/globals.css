@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +20,7 @@
 }
 
 body {
-  background: #233047;
+  background: #233148;
 }
 
 .container {
