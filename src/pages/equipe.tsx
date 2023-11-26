@@ -1,4 +1,8 @@
+import Navbar from "@/components/Navbar";
 import React from 'react';
+import "../app/globals.css";
+
+
 
 const equipe = () => {
     const teamMembers = [
@@ -8,16 +12,19 @@ const equipe = () => {
 
     return (
         <div>
-            <h1>Equipe</h1>
-            <ul>
-                {teamMembers.map((member, index) => (
-                    <li key={index}>
-                        <p>Nome: {member.name}</p>
-                        <p>GitHub: <a href={member.github}>{member.github}</a></p>
-                        <p>LinkedIn: <a href={member.linkedin}>{member.linkedin}</a></p>
-                    </li>
-                ))}
-            </ul>
+            <Navbar onEntrarClick={() => console.log('Botão Entrar Clicado')} />
+            <div className="text-white flex justify-center items-center">
+
+                <ul>
+                    {teamMembers.map((member, index) => (
+                        <li key={index}>
+                            <p>Nome: {member.name}</p>
+                            <p>GitHub: <a href={member.github}>{member.github}</a></p>
+                            <p>LinkedIn: <a href={member.linkedin}>{member.linkedin}</a></p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };
