@@ -2,9 +2,11 @@ import React from 'react'
 import Link from 'next/link';
 import { useEffect, useState } from "react";
 
+// Atualizada a interface para refletir a nova assinatura da função
 interface NavbarProps {
-    onEntrarClick: () => void;
+    onEntrarClick: (closeModal: boolean) => void;
 }
+
 
 export default function Navbar({ onEntrarClick }: NavbarProps) {
     // Adicionado estado e função de toggle para o menu responsivo
@@ -36,22 +38,22 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
                         <div className="hidden lg:block">
                             {/* Itens de menu para dispositivos maiores */}
                             <div className="ml-4 flex items-center space-x-4">
-                                <a href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
+                                <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
                                     Home
-                                </a>
-                                <a href="/equipe" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
+                                </Link>
+                                <Link href="/equipe" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
                                     Desenvolvedores
-                                </a>
-                                <a href="" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
+                                </Link>
+                                <Link href="" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
                                     Contact
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
                         <div className="hidden lg:flex items-center space-x-2">
 
                             <button className="text-white border-solid border-white border-2 px-5 py-2 text-1 hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-tl-lg rounded-bl-lg text-sm font-bold"
-                                onClick={onEntrarClick}
+                                onClick={() => onEntrarClick(true)}
                             >
                                 Entrar
                             </button>
@@ -113,18 +115,18 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
                     <div className="lg:hidden">
                         {/* Conteúdo do menu responsivo quando está aberto */}
                         <div className="px-2 pt-2 pb-3 space-x-1 sm:px-3 flex flex-col items-center">
-                            <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
+                            <Link href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
                                 Home
-                            </a>
-                            <a href="/equipe" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
+                            </Link>
+                            <Link href="/equipe" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
                                 Desenvolvedores
-                            </a>
-                            <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
+                            </Link>
+                            <Link href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
                                 Contact
-                            </a>
+                            </Link>
 
                             <button className="text-white border-solid border-white border-2 px-9 py-2 mb-3 text-1 hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-md text-sm font-bold"
-                                onClick={onEntrarClick} >
+                                onClick={() => onEntrarClick(true)} >
                                 Entrar
                             </button>
 

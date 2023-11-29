@@ -46,13 +46,13 @@ export default function Home() {
     }
   }
 
-  const handleEntrarClick = () => {
-    setShowModal(true);
+  // Renomeada a função de clique no botão Entrar
+  const handleEnter = (closeModal: boolean = false) => {
+    // A função agora manipula a abertura e fechamento do modal
+    setShowModal(closeModal);
   };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+
 
   const handleLoginSubmit = (email: string, senha: string) => {
     // Lógica de autenticação aqui
@@ -64,7 +64,7 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar onEntrarClick={handleEntrarClick} />
+      <Navbar onEntrarClick={handleEnter} />
       <div className="mx-auto max-w-7xl pb-24 pt-4 sm:px-6 sm:py-32 lg:px-8">
         <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
           <svg
@@ -130,7 +130,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Modal isOpen={showModal} onClose={handleCloseModal} onSubmit={handleLoginSubmit} title="Entrar" />
+      {/* Chamada do Modal com a função handleEnter*/}
+      <Modal isOpen={showModal} onClose={() => handleEnter(false)} onSubmit={handleLoginSubmit} title="Entrar" />
 
     </div>
   );
