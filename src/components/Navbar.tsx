@@ -42,7 +42,7 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
                                     Home
                                 </Link>
                                 <Link href="/equipe" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
-                                    Desenvolvedores
+                                    Team
                                 </Link>
                                 <Link href="" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
                                     Contact

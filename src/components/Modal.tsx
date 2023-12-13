@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { FaEye, FaEyeSlash, FaAddressCard } from 'react-icons/fa';
 import { useState } from 'react';
@@ -11,9 +12,11 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title }) => {
-    if (!isOpen) return null;
+
 
     const [showPassword, setShowPassword] = useState(false);
+
+    if (!isOpen) return null;
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();

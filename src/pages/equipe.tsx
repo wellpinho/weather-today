@@ -3,6 +3,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import "../app/globals.css";
 import Link from "next/link";
+import Image from 'next/image';
 
 
 
@@ -35,8 +36,15 @@ const equipe = () => {
                         <div key={index} className="bg-white/10 duration-500 p-8 rounded-md 
                         mix-blend-luminosity group-hover:blur-sm hover:!blur-none
                         group-hover:scale-[0.85] hover:!scale-100">
+                            <Image
+                                src={member.imgSrc}
+                                alt={`Avatar de ${member.name}`}
+                                width={16} // Substitua com a largura desejada em pixels
+                                height={16} // Substitua com a altura desejada em pixels
+                                className="w-16 h-16 rounded-full mx-auto mb-4"
+                            />
 
-                            <img src={member.imgSrc} alt={`Avatar de ${member.name}`} className="w-16 h-16 rounded-full mx-auto mb-4" />
+
                             <p className="text-xl font-bold mb-2 text-center">{member.name}</p>
                             <p className="text-sm leading-7 my-4 font-light opacity-50">{member.description}</p>
                             <div className="flex justify-center items-center gap-4">
