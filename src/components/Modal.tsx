@@ -1,5 +1,4 @@
 'use client'
-import React from 'react';
 import { FaEye, FaEyeSlash, FaAddressCard } from 'react-icons/fa';
 import { useState } from 'react';
 import Link from 'next/link';
