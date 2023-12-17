@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 
 
 interface NavbarProps {
-    onEntrarClick: (closeModal: boolean) => void;
+    handleEnter: (closeModal: boolean) => void;
 }
 
 
-export default function Navbar({ onEntrarClick }: NavbarProps) {
+export default function Navbar({ handleEnter }: NavbarProps) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -53,7 +53,7 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
                         <div className="hidden lg:flex items-center space-x-2">
 
                             <button className="text-white border-solid border-white border-2 px-5 py-2 text-1 hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-tl-lg rounded-bl-lg text-sm font-bold"
-                                onClick={() => onEntrarClick(true)}
+                                onClick={() => handleEnter(true)}
                             >
                                 Entrar
                             </button>
@@ -126,7 +126,7 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
                             </Link>
 
                             <button className="text-white border-solid border-white border-2 px-9 py-2 mb-3 text-1 hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-md text-sm font-bold"
-                                onClick={() => onEntrarClick(true)} >
+                                onClick={() => handleEnter(true)} >
                                 Entrar
                             </button>
 

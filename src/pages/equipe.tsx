@@ -27,7 +27,7 @@ const equipe = () => {
 
     return (
         <div>
-            <Navbar onEntrarClick={() => console.log('Botão Entrar Clicado')} />
+            <Navbar handleEnter={() => console.log('Botão Entrar Clicado')} />
             <div className=" text-center text-white py-10">
                 <h1 className="text-4xl w-96 mx-auto leading-normal font-bold mb-12">Desenvolvedores</h1>
 
