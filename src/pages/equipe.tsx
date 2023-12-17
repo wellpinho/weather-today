@@ -39,8 +39,8 @@ const equipe = () => {
                             <Image
                                 src={member.imgSrc}
                                 alt={`Avatar de ${member.name}`}
-                                width={16} // Substitua com a largura desejada em pixels
-                                height={16} // Substitua com a altura desejada em pixels
+                                width={16}
+                                height={16}
                                 className="w-16 h-16 rounded-full mx-auto mb-4"
                             />
 

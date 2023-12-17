@@ -46,16 +46,16 @@ export default function Home() {
     }
   }
 
-  // Renomeada a função de clique no botão Entrar
+
   const handleEnter = (closeModal: boolean = false) => {
-    // A função agora manipula a abertura e fechamento do modal
+
     setShowModal(closeModal);
   };
 
 
 
   const handleLoginSubmit = (email: string, senha: string) => {
-    // Lógica de autenticação aqui
+
     console.log('Email:', email);
     console.log('Senha:', senha);
     setShowModal(false);
@@ -130,7 +130,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Chamada do Modal com a função handleEnter*/}
+
       <Modal isOpen={showModal} onClose={() => handleEnter(false)} onSubmit={handleLoginSubmit} title="Entrar" />
 
     </div>
