@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import "../app/globals.css";
 import Link from "next/link";
@@ -25,9 +24,13 @@ const equipe = () => {
         },
     ];
 
+    const handleEnter = () => {
+        console.log('Botão Entrar Clicado');
+    };
+
     return (
         <div>
-            <Navbar handleEnter={() => console.log('Botão Entrar Clicado')} />
+            <Navbar handleEnter={handleEnter} />
             <div className=" text-center text-white py-10">
                 <h1 className="text-4xl w-96 mx-auto leading-normal font-bold mb-12">Desenvolvedores</h1>
 
@@ -61,6 +64,7 @@ const equipe = () => {
                     ))}
                 </div>
             </div>
+
         </div>
     );
 };
