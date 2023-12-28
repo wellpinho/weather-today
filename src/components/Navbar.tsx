@@ -1,29 +1,30 @@
-import React from 'react'
 import Link from 'next/link';
 import { useEffect, useState } from "react";
 
+
 interface NavbarProps {
-    onEntrarClick: () => void;
+    handleEnter: (closeModal: boolean) => void;
 }
 
-export default function Navbar({ onEntrarClick }: NavbarProps) {
-    // Adicionado estado e função de toggle para o menu responsivo
+
+export default function Navbar({ handleEnter }: NavbarProps) {
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 
-    // Adicionado estado e função de toggle para o menu responsivo
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
     return (
         <div>
-            {/* Inicio Nav */}
+
             <nav className="bg-gray-900 bg-opacity-75">
 
                 <div className=" w-[92%] mx-auto sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center">
-                            {/* Logo e outros elementos do Navbar */}
+
                             <div className="flex-shrink-0">
                                 <Link href="/"
                                     className="text-white text-3xl font-sans">
@@ -34,24 +35,24 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
                         </div>
 
                         <div className="hidden lg:block">
-                            {/* Itens de menu para dispositivos maiores */}
+
                             <div className="ml-4 flex items-center space-x-4">
-                                <a href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
+                                <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
                                     Home
-                                </a>
-                                <a href="/equipe" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
-                                    Desenvolvedores
-                                </a>
-                                <a href="" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
+                                </Link>
+                                <Link href="/Team" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
+                                    Team
+                                </Link>
+                                <Link href="" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
                                     Contact
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
                         <div className="hidden lg:flex items-center space-x-2">
 
                             <button className="text-white border-solid border-white border-2 px-5 py-2 text-1 hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-tl-lg rounded-bl-lg text-sm font-bold"
-                                onClick={onEntrarClick}
+                                onClick={() => handleEnter(true)}
                             >
                                 Entrar
                             </button>
@@ -67,7 +68,7 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
 
 
                         <div className="lg:hidden flex items-center">
-                            {/* Botão de toggle para o menu responsivo */}
+
                             <button
                                 onClick={toggleMenu}
                                 className="inline-flex items-center justify-center p-2 rounded-md text-white
@@ -75,7 +76,7 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
 
                             >
                                 {isMenuOpen ? (
-                                    /* Ícone de fechar o menu quando está aberto */
+
                                     <svg className="h-6 w-6"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
@@ -90,7 +91,7 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
                                         />
                                     </svg>
                                 ) : (
-                                    /* Ícone de abrir o menu quando está fechado */
+
                                     <svg className="h-6 w-6"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
@@ -111,20 +112,20 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
                 </div>
                 {isMenuOpen && (
                     <div className="lg:hidden">
-                        {/* Conteúdo do menu responsivo quando está aberto */}
+
                         <div className="px-2 pt-2 pb-3 space-x-1 sm:px-3 flex flex-col items-center">
-                            <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
+                            <Link href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
                                 Home
-                            </a>
-                            <a href="/equipe" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
-                                Desenvolvedores
-                            </a>
-                            <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
+                            </Link>
+                            <Link href="/Team" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
+                                Team
+                            </Link>
+                            <Link href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
                                 Contact
-                            </a>
+                            </Link>
 
                             <button className="text-white border-solid border-white border-2 px-9 py-2 mb-3 text-1 hover:bg-white hover:text-black transition duration-500 ease-in-out rounded-md text-sm font-bold"
-                                onClick={onEntrarClick} >
+                                onClick={() => handleEnter(true)} >
                                 Entrar
                             </button>
 
@@ -137,7 +138,7 @@ export default function Navbar({ onEntrarClick }: NavbarProps) {
                     </div>
                 )}
             </nav>
-            {/* Final Nav */}
+
 
         </div>
     )
