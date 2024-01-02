@@ -34,9 +34,9 @@ const equipe = () => {
             <div className=" text-center text-white py-10">
                 <h1 className="text-4xl w-96 mx-auto leading-normal font-bold mb-12">Desenvolvedores</h1>
 
-                <div className="flex justify-center items-center max-w-5xl mx-auto gap-8 group">
+                <div className="flex flex-wrap justify-center items-center max-w-1/4 mx-auto gap-4 md:gap-8 group">
                     {teamMembers.map((member, index) => (
-                        <div key={index} className="bg-white/10 duration-500 p-8 rounded-md 
+                        <div key={index} className=" w-1/2 sm:w-1/3 lg:w-1/4 bg-white/10 duration-500 p-4 md:p-8 rounded-md 
                         mix-blend-luminosity group-hover:blur-sm hover:!blur-none
                         group-hover:scale-[0.85] hover:!scale-100">
                             <Image
