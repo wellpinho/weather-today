@@ -43,7 +43,7 @@ export default function Navbar({ handleEnter }: NavbarProps) {
                                 <Link href="/Team" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
                                     Team
                                 </Link>
-                                <Link href="" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
+                                <Link href="/contact" className="text-white hover:bg-white hover:text-black rounded-lg p-2 transition duration-500 ease-in-out">
                                     Contact
                                 </Link>
                             </div>
@@ -120,7 +120,7 @@ export default function Navbar({ handleEnter }: NavbarProps) {
                             <Link href="/Team" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
                                 Team
                             </Link>
-                            <Link href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
+                            <Link href="/contact" className="text-white block hover:bg-white hover:text-black rounded-lg p-2 mb-3 transition duration-500 ease-in-out">
                                 Contact
                             </Link>
 
