@@ -49,17 +49,28 @@ const equipe = () => {
 
 
                             <p className="text-xl font-bold mb-2 text-center">{member.name}</p>
+
                             <p className="text-sm leading-7 my-4 font-light opacity-50">{member.description}</p>
+
                             <div className="flex justify-center items-center gap-4">
                                 <Link href={member.github} target="_blank" rel="noopener noreferrer"
-                                    className="social-button bg-gray-800 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-900">
-                                    <FaGithub size={20} color="white" />
+                                    className="bg-gray-800 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out 
+                                    hover:bg-gray-900 hover:shadow-lg hover:shadow-black/30">
+                                    <div className="flex items-center space-x-2">
+                                        <FaGithub size={20} color="white" />
+                                        <span>GitHub</span>
+                                    </div>
                                 </Link>
                                 <Link href={member.linkedin} target="_blank" rel="noopener noreferrer"
-                                    className="social-button bg-gray-800 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-900">
-                                    <FaLinkedin size={20} color="white" />
+                                    className="bg-gray-800 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out 
+                                    hover:bg-gray-900 hover:shadow-lg hover:shadow-black/30">
+                                    <div className="flex items-center space-x-2">
+                                        <FaLinkedin size={20} color="white" />
+                                        <span>LinkedIn</span>
+                                    </div>
                                 </Link>
                             </div>
+
                         </div>
                     ))}
                 </div>
