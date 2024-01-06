@@ -1,5 +1,6 @@
 
 const contact = () => {
+    //console.log("Página de contato sendo renderizada...");
     return (
         <div>
             <h1>

@@ -34,11 +34,11 @@ const equipe = () => {
             <div className=" text-center text-white py-10">
                 <h1 className="text-4xl w-96 mx-auto leading-normal font-bold mb-12">Desenvolvedores</h1>
 
-                <div className="flex flex-wrap justify-center items-center max-w-1/4 mx-auto gap-4 md:gap-8 group">
+                <div className="flex flex-wrap justify-center items-center max-w-5xl mx-auto gap-8 group">
                     {teamMembers.map((member, index) => (
-                        <div key={index} className=" w-1/2 sm:w-1/3 lg:w-1/4 bg-white/10 duration-500 p-4 md:p-8 rounded-md 
+                        <div key={index} className="bg-white/10 duration-500 p-4 md:p-8 rounded-md 
                         mix-blend-luminosity group-hover:blur-sm hover:!blur-none
-                        group-hover:scale-[0.85] hover:!scale-100">
+                        group-hover:scale-[0.85] hover:!scale-100 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 max-w-[340px]">
                             <Image
                                 src={member.imgSrc}
                                 alt={`Avatar de ${member.name}`}
@@ -49,17 +49,28 @@ const equipe = () => {
 
 
                             <p className="text-xl font-bold mb-2 text-center">{member.name}</p>
+
                             <p className="text-sm leading-7 my-4 font-light opacity-50">{member.description}</p>
+
                             <div className="flex justify-center items-center gap-4">
                                 <Link href={member.github} target="_blank" rel="noopener noreferrer"
-                                    className="social-button bg-gray-800 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-900">
-                                    <FaGithub size={20} color="white" />
+                                    className="bg-gray-800 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out 
+                                    hover:bg-gray-900 hover:shadow-lg hover:shadow-black/30">
+                                    <div className="flex items-center space-x-2">
+                                        <FaGithub size={20} color="white" />
+                                        <span>GitHub</span>
+                                    </div>
                                 </Link>
                                 <Link href={member.linkedin} target="_blank" rel="noopener noreferrer"
-                                    className="social-button bg-gray-800 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-900">
-                                    <FaLinkedin size={20} color="white" />
+                                    className="bg-gray-800 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out 
+                                    hover:bg-gray-900 hover:shadow-lg hover:shadow-black/30">
+                                    <div className="flex items-center space-x-2">
+                                        <FaLinkedin size={20} color="white" />
+                                        <span>LinkedIn</span>
+                                    </div>
                                 </Link>
                             </div>
+
                         </div>
                     ))}
                 </div>
